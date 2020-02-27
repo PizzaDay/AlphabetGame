@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Helvetica;
+    background: repeating-linear-gradient(-45deg,#e98cca 0%, #dd60b3 7.14%, #dd41a9 14.28%, #d30f91 21.42%, #880a5e 28.56%, #dd41a9 35.7%, #dd60b3 42.84%, #e98cca 50%);
+    background-size:600vw 600vw;
+    -webkit-animation:'slide' 7s infinite linear forwards;
+
+}
+
+/*Thanks to https://codepen.io/mcdeeda/pen/VpRpww for the rainbow animation, which I altered for use here*/
+
+@keyframes slide{
+    0%{
+      background-position-x: 0%;
+    }
+    100%{
+      background-position-x: 600vw;
+    }
+  }
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+ul {
+    background: whitesmoke;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 3em;
+    height: 80vh;
+    width: 100vw;
+    max-width: 100%;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    width: 20rem;
+    height: 20rem;
+    border: 10px solid #eb26a9;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 20px 25px #33092521;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+button {
+    text-transform: uppercase;
+    width: 3rem;
+    height: 3rem;
+    border-style: none;
+    border-radius: 25px;
+
+}
+
+.notIt {
+    background-color: gray;
+    border: 10px solid darkslategray;
+    color: darkslategray;
+}
+
+.it {
+    background: repeating-linear-gradient(-45deg,#e98cca 0%, #dd60b3 7.14%, #dd41a9 14.28%, #d30f91 21.42%, #880a5e 28.56%, #dd41a9 35.7%, #dd60b3 42.84%, #e98cca 50%);
+    background-size:600vw 600vw;
+    -webkit-animation:'slide' 4s infinite linear forwards;
+    border-color: rgba(143, 143, 143, 0.5);
+}
