@@ -54,7 +54,7 @@ function newLetters(){
   chosenLetter = newArray[thisOne];
   createLetters();
   letterAudio = `./assets/VO/${chosenLetter}.mp3`;
-  setAudio();
+  letterSound();
 }
 
 function letterSelector(arr){
@@ -102,13 +102,9 @@ function letterSound() {
   audio.pause();
   audio.load();
   audio.play();
-  audio.removeEventListener('ended', letterSound)
+
 }
 
-function setAudio() {
-  audio.src = "./assets/VO/FindTheLetter.mp3";
-  audio.addEventListener('ended', letterSound);
-}
 
 function applause(){
   audio.src = "./assets/VO/correct answer with clapping.mp3";
