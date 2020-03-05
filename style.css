@@ -6,19 +6,18 @@
 body {
     font-family: Helvetica;
     background: repeating-linear-gradient(-45deg,#e98cca 0%, #dd60b3 7.14%, #dd41a9 14.28%, #d30f91 21.42%, #880a5e 28.56%, #dd41a9 35.7%, #dd60b3 42.84%, #e98cca 50%);
-    background-size:600vw 600vw;
-    -webkit-animation:'slide' 7s infinite linear forwards;
+    background-size: 5000px 5000px;
+    overflow: hidden;
+    animation: slide 8s infinite linear forwards;
 
 }
 
-/*Thanks to https://codepen.io/mcdeeda/pen/VpRpww for the rainbow animation, which I altered for use here*/
-
-@keyframes slide{
-    0%{
-      background-position-x: 0%;
+@keyframes slide {
+    0% {
+      background-position: 0% 0;
     }
-    100%{
-      background-position-x: 600vw;
+    100% {
+      background-position: 100% 0;
     }
   }
 
@@ -39,7 +38,6 @@ ul {
     gap: 3em;
     height: 80vh;
     width: 100vw;
-    max-width: 100%;
     align-items: center;
 }
 
