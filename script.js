@@ -1,5 +1,6 @@
 
 /* Future Implementations
+Make elements not interactive after selected
 Start screen
 Glowing or bouncing Next button
 Get rid of selection decoration on buttons
@@ -15,7 +16,7 @@ const button = document.querySelector("button");
 const h3 = document.querySelector("h3");
 let audio = document.querySelector("#findLetterAudio");
 
-const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let alphabetCopy = [...alphabet];
 let shuffledAlphabet;
 let contestantLetters;
@@ -99,10 +100,6 @@ function createLetters(){
 
 function letterSound() {
   audio.src = letterAudio;
-  audio.pause();
-  audio.load();
-  audio.play();
-
 }
 
 
