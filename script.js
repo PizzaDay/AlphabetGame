@@ -1,3 +1,8 @@
+Window.onresize = function() {
+    document.body.height = window.innerHeight;
+}
+
+Window.onresize();
 
 /* Future Implementations
 Make elements not interactive after selected
@@ -11,9 +16,8 @@ Color scheme changes every game
 
 
 const li = document.querySelectorAll("li");
-const span = document.querySelector("h3 span");
 const button = document.querySelector("button");
-const h3 = document.querySelector("h3");
+const h1 = document.querySelector("h1");
 let audio = document.querySelector("#findLetterAudio");
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -80,7 +84,8 @@ function removeClasses(){
 }
 
 function letterChecker(event){
-  if(event.target.innerHTML === chosenLetter) {
+    console.log(event.target.tagName);
+    if(event.target.innerHTML === chosenLetter) {
     allNotIt();
     event.target.classList.remove("notIt");
     event.target.classList.add("it");
@@ -88,7 +93,7 @@ function letterChecker(event){
   } else {
     event.target.classList.add("notIt");
     incorrect();
-  }
+  } 
 }
 
 function createLetters(){
@@ -118,5 +123,3 @@ function incorrect(){
 }
 
 button.onclick = newLetters;
-
-

@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alphabet Game</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3><audio controls autoplay id='findLetterAudio'></audio></h3>
-    <ul id=container>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
 
-    <div id='buttonContainer'>
-        <button>Next</button>
-    </div>
-    
+	<div id="wrapper">
+		<div id="banner">
+			<div id="h1Container">
+				<h1><audio controls autoplay id="findLetterAudio"></audio></h1>
+			</div>
+		</div>
+		
+		<div id="gamefield">
+				<ul>
+					<li id="tile1">A</li>
+					<li id="tile2">B</li>
+					<li id="tile3">C</li>
+				</ul>
+		</div>
+	
+		<div id="footer">
+			<div id="buttonContainer">
+				<button>NEXT</button>
+			</div>
+		</div>
+	</div>
 
-    <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
