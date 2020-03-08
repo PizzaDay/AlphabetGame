@@ -4,8 +4,8 @@
   padding: 0;
 }
 :root {
-    --tile-size: 15rem;
-    --tile-font-size: 11rem;
+    --tile-size: 12rem;
+    --tile-font-size: 9rem;
     --button-width: 6rem;
     --button-height: 4rem;
     --button-font-size: 1.5rem;
@@ -18,7 +18,6 @@ body {
 
 #wrapper {
     position: fixed;
-    height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-rows: [banner] 20% [gamefield] 60% [footer] 20%;

@@ -1,8 +1,4 @@
-Window.onresize = function() {
-    document.body.height = window.innerHeight;
-}
 
-Window.onresize();
 
 /* Future Implementations
 Make elements not interactive after selected
@@ -14,11 +10,12 @@ Color scheme changes every game
 */
 
 
-
+const wrapper = document.querySelector("#wrapper");
 const li = document.querySelectorAll("li");
 const button = document.querySelector("button");
 const h1 = document.querySelector("h1");
 let audio = document.querySelector("#findLetterAudio");
+
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let alphabetCopy = [...alphabet];
@@ -28,6 +25,14 @@ let newArray;
 let thisOne;
 let chosenLetter;
 let letterAudio;
+
+//fix for wiggle scroll on mobile
+window.onresize = function() {
+  wrapper.style.height = window.innerHeight + "px";
+  console.log(window.innerHeight);
+}
+
+window.onresize();
 
 newLetters();
 
@@ -106,7 +111,6 @@ function createLetters(){
 function letterSound() {
   audio.src = letterAudio;
 }
-
 
 function applause(){
   audio.src = "./assets/VO/correct answer with clapping.mp3";
